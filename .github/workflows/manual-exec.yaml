@@ -11,7 +11,7 @@ on:
 
 # trabalhos/tarefas dentro do pipeline = jobs
 jobs:
-  e2e-tests:
+  unit-tests:
     #maquina que o job vai executar
     runs-on: ubuntu-latest
 
@@ -21,9 +21,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # instalacao do node
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3
         with:
           node-version: 22.x
+          cache: 'npm'
 
        # instalacao das dependencias
       - name: Instalando dependências
