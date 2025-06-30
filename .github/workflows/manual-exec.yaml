@@ -32,6 +32,3 @@ jobs:
       # executar os testes entregue no trabalho final da disciplina de programacao JS
       - name: Executando Testes do trabalho final da disciplina de JS
         run: npx mocha ./trabalho-final/testes/trabalho-final.js
-
-      - name: Run tests with Mocha
-        run: npx mocha --reporter mochawesome
